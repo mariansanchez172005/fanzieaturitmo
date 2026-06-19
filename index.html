@@ -161,7 +161,6 @@
             padding-left: 20px;
         }
 
-        /* Imagen Principal Responsiva */
         .hero-image {
             display: block;
             max-width: 100%;
@@ -249,7 +248,7 @@
             margin-bottom: 5px;
         }
 
-        /* GALERÍA / DOS FOTOS SOLICITADAS */
+        /* GALERÍA / EL FANZIE */
         .gallery-grid {
             display: block;
             text-align: center;
@@ -305,7 +304,17 @@
             background-color: var(--color-blue);
             vertical-align: middle;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
+        }
+
+        .product-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--color-black);
+            border-radius: 8px;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+            margin: 0 auto;
         }
 
         .product-info-col {
@@ -474,8 +483,8 @@
 
     <section class="container" id="fanzie">
         <h2 class="section-title">El fanzie</h2>
-        <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto; font-size: 1.1rem; color: #555;">
-            Un vistazo al interior de las páginas cargadas de arte lineal, reflexiones sutiles y espacios de auto-descubrimiento.
+        <p style="text-align: center; max-width: 750px; margin: -20px auto 40px auto; font-size: 1.15rem; color: #444; font-family: var(--font-body);">
+            Este fanzie viene cargado de arte lineal, reflexiones sutiles y espacios de auto-descubrimiento, que se convierte en un póster pensado en ser parte de tu espacio.
         </p>
         
         <div class="gallery-grid">
@@ -517,15 +526,17 @@
             <h2 class="section-title">Lleva tu Fanzie</h2>
             <div class="product-card">
                 <div class="product-img-col">
-                    <div style="border: 2px dashed var(--color-black); background: #fff; padding: 40px 10px; border-radius: 8px;">
-                        <span style="font-family: var(--font-title); font-size: 1.2rem; display: block;">EDICIÓN IMPRESA</span>
-                        <div style="width: 70px; height: 70px; background-color: var(--color-yellow); border-radius: 50%; margin: 15px auto; border: 2px solid var(--color-black);"></div>
-                        <p style="font-size: 0.85rem; color:#555;">Incluye sobre protector y set de stickers.</p>
-                    </div>
+                    <img src="sobre abierto.png" alt="Sobre Protector Abierto" class="product-image">
                 </div>
+                
                 <div class="product-info-col">
                     <h3 style="font-family: var(--font-title); font-size: 1.8rem;">Fanzie Físico + Kit de Crecimiento</h3>
                     <p style="margin-top: 10px;">Consigue la edición impresa limitada. Cada ejemplar viene empaquetado individualmente con materiales de primera calidad.</p>
+                    
+                    <p style="margin-top: 10px; font-weight: bold; color: var(--color-black);">
+                        incluye el sobre protector
+                    </p>
+                    
                     <div class="price">
                         <span>$250 MXN</span>
                     </div>
