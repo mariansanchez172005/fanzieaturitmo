@@ -33,7 +33,6 @@
             color: var(--color-black);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Fondo decorativo que emula de manera limpia manchas abstractas */
             background-image: 
                 radial-gradient(circle at 10% 15%, rgba(214, 226, 240, 0.4) 0%, transparent 20%),
                 radial-gradient(circle at 85% 20%, rgba(215, 184, 232, 0.4) 0%, transparent 25%),
@@ -162,40 +161,15 @@
             padding-left: 20px;
         }
 
-        /* Maquetación del Mockup Visual */
-        .mockup-container {
-            position: relative;
-            width: 100%;
-            height: 380px;
-        }
-
-        .mockup-book {
-            position: absolute;
-            width: 240px;
-            height: 290px;
-            background-color: #fff;
+        /* Imagen Principal Responsiva */
+        .hero-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
             border: 3px solid var(--color-black);
+            border-radius: 12px;
             box-shadow: 12px 12px 0px rgba(0,0,0,0.08);
-            transform: rotate(-10deg);
-            top: 30px;
-            left: 20px;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .mockup-envelope {
-            position: absolute;
-            width: 260px;
-            height: 220px;
-            background-color: #fff;
-            border: 3px solid var(--color-black);
-            box-shadow: 15px 15px 0px rgba(0,0,0,0.05);
-            transform: rotate(12deg);
-            top: 70px;
-            right: 40px;
-            border-radius: 4px;
-            padding: 20px;
+            margin: 0 auto;
         }
 
         .tag-autor {
@@ -275,7 +249,7 @@
             margin-bottom: 5px;
         }
 
-        /* GALERÍA / INTERIOR DEL FANZIE */
+        /* GALERÍA / DOS FOTOS SOLICITADAS */
         .gallery-grid {
             display: block;
             text-align: center;
@@ -283,31 +257,26 @@
 
         .gallery-item {
             display: inline-block;
-            width: 31%;
-            margin: 1%;
+            width: 46%;
+            margin: 1.5%;
             background-color: #fff;
             border: 2px solid var(--color-black);
             border-radius: 8px;
-            padding: 10px;
-            box-shadow: 5px 5px 0px rgba(0,0,0,0.05);
+            padding: 12px;
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.05);
             vertical-align: top;
         }
 
-        .gallery-placeholder {
+        .gallery-item img {
             width: 100%;
-            height: 220px;
-            background-color: var(--color-grey);
+            height: auto;
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 0.9rem;
-            font-style: italic;
+            display: block;
+            border: 1px solid var(--color-grey);
         }
 
         .gallery-item p {
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 0.95rem;
         }
 
@@ -444,22 +413,6 @@
                 margin-bottom: 40px;
             }
 
-            .mockup-container {
-                height: 320px;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            .mockup-book {
-                width: 180px;
-                height: 220px;
-            }
-            .mockup-envelope {
-                width: 200px;
-                height: 170px;
-                top: 60px;
-                right: 10px;
-            }
-
             .hero-tagline {
                 font-size: 1.6rem;
                 text-align: center;
@@ -501,20 +454,7 @@
     <section class="hero">
         <div class="grid-hero">
             <div class="col-hero-left">
-                <div class="mockup-container">
-                    <div class="mockup-book">
-                        <div style="border: 1px dashed var(--color-grey); height: 100%; padding: 10px; background-image: radial-gradient(var(--color-grey) 1px, transparent 1px); background-size: 10px 10px;">
-                            <span style="font-size: 0.8rem; text-transform: uppercase;">Fanzie Ilustrado</span>
-                            <h2 style="font-size: 1.3rem; margin-top: 15px; line-height: 1.1;">No tienes que tener <span style="background-color: var(--color-yellow); padding: 0 4px;">todo</span> resuelto</h2>
-                        </div>
-                    </div>
-                    <div class="mockup-envelope">
-                        <div style="border-top: 2px dashed var(--color-lila); margin-top: 40px; text-align: center; padding-top: 20px;">
-                            <div style="width: 50px; height: 50px; background-color: var(--color-blue); border-radius: 50%; margin: 0 auto 10px auto;"></div>
-                            <p style="font-size: 0.75rem;">Proceso & Crecimiento</p>
-                        </div>
-                    </div>
-                </div>
+                <img src="Fanzie.png" alt="No tienes que tener todo resuelto" class="hero-image">
                 <div class="tag-autor" style="text-align: center;">
                     <p style="font-family: var(--font-body); font-weight: normal; font-style: italic; color: #666;">Una obra por:</p>
                     <p style="font-size: 1.3rem;">Marian Sánchez Flores</p>
@@ -533,29 +473,19 @@
     </section>
 
     <section class="container" id="fanzie">
-        <h2 class="section-title">Hojas del Fanzie</h2>
+        <h2 class="section-title">El fanzie</h2>
         <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto; font-size: 1.1rem; color: #555;">
             Un vistazo al interior de las páginas cargadas de arte lineal, reflexiones sutiles y espacios de auto-descubrimiento.
         </p>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <span>[ Inserta aquí: foto_fanzie_1.jpg ]</span>
-                </div>
-                <p><b>Aceptar tu proceso:</b> Ilustraciones sobre el tiempo y la paciencia personal.</p>
+                <img src="portada.png" alt="Portada del Fanzie">
+                <p><b>Edición de Portada:</b> Narrativa gráfica honesta y limpia.</p>
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <span>[ Inserta aquí: foto_fanzie_2.jpg ]</span>
-                </div>
-                <p><b>Herramientas creativas:</b> Arte interactivo y dinámicas visuales.</p>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <span>[ Inserta aquí: foto_fanzie_3.jpg ]</span>
-                </div>
-                <p><b>Detalles del empaque:</b> Calidad de impresión sobre papel de alta gama.</p>
+                <img src="Poster.png" alt="Poster del Fanzie">
+                <p><b>Ilustración de Poster:</b> Arte lineal pensado para tu espacio personal.</p>
             </div>
         </div>
     </section>
@@ -599,7 +529,7 @@
                     <div class="price">
                         <span>$250 MXN</span>
                     </div>
-                    <button class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1.1rem;" onclick="alert('¡Enlace de pago simulado! Aquí puedes colocar tu link de PayPal, Stripe o Mercado Pago.')">
+                    <button class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1.1rem;" onclick="alert('¡Enlace de pago simulado!')">
                         🛒 Comprar Ahora
                     </button>
                     <div class="product-meta">
